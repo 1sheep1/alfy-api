@@ -1,4 +1,4 @@
--- 修复 V31 种子数据缺陷：多条 INSERT 共用同一 NOT EXISTS 守卫，
+-- 修复 V33 种子数据缺陷：多条 INSERT 共用同一 NOT EXISTS 守卫，
 -- 实际只写入了第一条记录。此处按名称守卫补齐其余团队成员与基地。
 
 INSERT INTO team_member (role, name, bio, sort_order, enabled)

@@ -8,7 +8,7 @@ ALTER TABLE redirect_rule
     ADD COLUMN last_hit_at DATETIME NULL AFTER hit_count;
 
 CREATE INDEX idx_redirect_lookup
-    ON redirect_rule (source_host, source_path, enabled, deleted);
+    ON redirect_rule (source_host, source_path(500), enabled, deleted);
 
 CREATE INDEX idx_redirect_last_hit
     ON redirect_rule (last_hit_at);
